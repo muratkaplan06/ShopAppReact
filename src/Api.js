@@ -21,27 +21,27 @@ axios.interceptors.request.use(
 
 export const fetchProductList = async (name, page) => {
   const { data } = await axios.get(
-    `https://localhost:7123/api/Product/GetProductList?Name=${name}&page=${page}`,
+    `https://localhost:****/api/Product/GetProductList?Name=${name}&page=${page}`,
   )
   return data
 }
 export const fetchProductsByCategory = async (categoryId, page) => {
   const { data } = await axios.get(
-    `https://localhost:7123/api/Category/GetAll?CategoryId=${categoryId}&Page=${page}`,
+    `https://localhost:****/api/Category/GetAll?CategoryId=${categoryId}&Page=${page}`,
   )
   return data
 }
 
 export const fetchProductById = async (id) => {
   const { data } = await axios.get(
-    `https://localhost:7123/api/Product/GetProductById/${id}`,
+    `https://localhost:****/api/Product/GetProductById/${id}`,
   )
   return data
 }
 
 export const fetchRegister = async (input) => {
   const { data } = await axios.post(
-    'https://localhost:7123/api/Authentication/Register',
+    'https://localhost:****/api/Authentication/Register',
     input,
   )
 
@@ -49,7 +49,7 @@ export const fetchRegister = async (input) => {
 }
 export const fetchLogin = async (input) => {
   const { data } = await axios.post(
-    'https://localhost:7123/api/Authentication/Login',
+    'https://localhost:****/api/Authentication/Login',
     input,
   )
 
@@ -58,7 +58,7 @@ export const fetchLogin = async (input) => {
 
 export const fetchMe = async () => {
   const { data } = await axios.get(
-    'https://localhost:7123/api/Authentication/Me',
+    'https://localhost:****/api/Authentication/Me',
   )
 
   return data
@@ -66,7 +66,7 @@ export const fetchMe = async () => {
 
 export const fetchOut = async () => {
   const { data } = await axios.post(
-    'https://localhost:7123/api/Authentication/Logout',
+    'https://localhost:****/api/Authentication/Logout',
     {
       refreshToken: localStorage.getItem(jwtKeyRefresh),
     },
@@ -77,7 +77,7 @@ export const fetchOut = async () => {
 
 export const fetchAddBasket = async (input) => {
   const { data } = await axios.post(
-    'https://localhost:7123/api/ShopAppUser/AddBasketProduct',
+    'https://localhost:****/api/ShopAppUser/AddBasketProduct',
     {
       ProductId: input,
     },
@@ -92,13 +92,13 @@ export const fetchIsAdded = async (productId) => {
 }
 export const fetchDeleteinBasket = async (productId) => {
   const { data } = await axios.delete(
-    `https://localhost:7123/api/ShopAppUser/DelBasketProductById?id=${productId}`,
+    `https://localhost:****/api/ShopAppUser/DelBasketProductById?id=${productId}`,
   )
   return data
 }
 export const fetchBasketProductList = async (page = 1) => {
   const { data } = await axios.get(
-    `https://localhost:7123/api/ShopAppUser/GetBasketProductList?Page=${page}`,
+    `https://localhost:****/api/ShopAppUser/GetBasketProductList?Page=${page}`,
   )
   return data
 }
