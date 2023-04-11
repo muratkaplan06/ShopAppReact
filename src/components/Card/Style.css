@@ -1,0 +1,7 @@
+.card a {
+  text-decoration: none;
+  color: #eff5f5;
+}
+.card a:hover {
+  color: #ffffff !important;
+}
